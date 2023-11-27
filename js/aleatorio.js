@@ -30,3 +30,14 @@ document.getElementById("submitGuess").addEventListener("click", function() {
         alert("Primero debes comenzar el juego.");
     }
 });
+// Función para comprobar si el usuario adivinó el número
+function comprobarAdivinanza(suposicionUsuario) {
+    if (suposicionUsuario === numeroMagico) {
+        actualizarMensajePista("¡Felicidades! Adivinaste el número.");
+        juegoIniciado = false;
+    } else if (suposicionUsuario < numeroMagico) {
+        actualizarMensajePista("El número que ingresaste es menor al número mágico.");
+    } else {
+        actualizarMensajePista("El número que ingresaste es mayor al número mágico.");
+    }
+}
