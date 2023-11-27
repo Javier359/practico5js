@@ -5,3 +5,8 @@ let juegoIniciado = false;
 function generarNumeroMagico() {
     numeroMagico = Math.floor(Math.random() * 100) + 1;
 }
+// Función para actualizar el mensaje de pista según la suposición del usuario
+function actualizarMensajePista(mensaje) {
+    const hintElemento = document.getElementById("hint");
+    hintElemento.textContent = mensaje;
+}
